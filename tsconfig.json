@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-memoize": [
+        "dist/ng-memoize"
+      ],
+      "ng-memoize/*": [
+        "dist/ng-memoize/*"
+      ]
+    }
   }
 }

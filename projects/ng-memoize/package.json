@@ -1,0 +1,9 @@
+{
+  "name": "ng-memoize",
+  "version": "0.0.2",
+  "homepage": "https://github.com/haldunatar/ng-memoize",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  }
+}

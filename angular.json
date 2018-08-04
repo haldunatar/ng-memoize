@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "ng-memoize": {
+      "root": "projects/ng-memoize",
+      "sourceRoot": "projects/ng-memoize/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-memoize/tsconfig.lib.json",
+            "project": "projects/ng-memoize/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ng-memoize/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-memoize/src/test.ts",
+            "tsConfig": "projects/ng-memoize/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-memoize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-memoize/tsconfig.lib.json",
+              "projects/ng-memoize/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "memoize"
